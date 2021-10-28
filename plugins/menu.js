@@ -6,30 +6,29 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌─〔 %me 〕
+┌─〔 *stikerin* 〕
 ├ Hai, %name!
 │
-├ Tersisa *%limit Limit*
+├ Limit *%limit Limit*
 ├ Role *%role*
 ├ Level *%level (%exp / %maxexp)* [%xp4levelup]
 ├ %totalexp XP secara Total
 │ 
-├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
+├ Tanggal: *%week, %date*
+├ Islam: *%dateIslamic*
 ├ Waktu: *%time*
 │
 ├ Uptime: *%uptime (%muptime)*
 ├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
+├ Bot friends:
+├ wa.me/994401731426
 └────
 %readmore`.trimStart(),
   header: '┌─〔 %category 〕',
   body: '├ %cmd %islimit %isPremium',
   footer: '└────\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+*stikerin*
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
